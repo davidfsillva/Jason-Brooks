@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Axon Performance | Personal Trainer</title>
+    <meta name="description" content="Personal trainer focused on performance, aesthetics and real physical transformation. Customized training programs for serious results.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Axon Performance | Personal Trainer">
+    <meta property="og:description" content="Customized training programs focused on performance and transformation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg">
+
+    <!-- Font Awesome (removido duplicado) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">AXON</div>
+
+            <nav class="nav" id="nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button 
+                class="menu-toggle" 
+                id="menu-toggle" 
+                aria-label="Toggle navigation menu"
+                aria-expanded="false">
+
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content fade-in">
+            <p class="hero-small">Where Discipline Meets Performance</p>
+            <h1>AXON</h1>
+            <p class="hero-sub">Elite Personal Training Experience</p>
+            <a href="#contact" class="btn-primary">Start Your Transformation</a>
+        </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>+150</h3>
+                <p>Clients Transformed</p>
+            </div>
+            <div class="stat-item">
+                <h3>5+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Commitment to Results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BENEFITS ================= -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title fade-in">Build the Strongest Version of Yourself</h2>
+
+            <div class="benefits-grid">
+
+                <div class="benefit-card fade-in">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <h3>Customized Training</h3>
+                    <p>Personalized programs designed around your goals and fitness level.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Visible Results</h3>
+                    <p>Structured method focused on strength, aesthetics and performance.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Direct Coaching</h3>
+                    <p>Ongoing support to keep you disciplined and constantly improving.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+        <div class="container about-container fade-in">
+
+            <div class="about-image">
+                <img src="img/hero2.webp" alt="Professional personal trainer coaching client">
+            </div>
+
+            <div class="about-text">
+                <h2>About Axon Performance</h2>
+                <p>
+                    Specialist in body transformation and high performance training.
+                    My methodology is built on discipline, science and measurable progress.
+                </p>
+                <p>
+                    If you're serious about real, consistent results,
+                    this is where your next level begins.
+                </p>
+                <a href="#contact" class="btn-secondary">Work With Me</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta" id="contact">
+        <div class="container fade-in">
+            <h2>Ready to Elevate Your Performance?</h2>
+            <p>Fill out the form below and start your transformation today.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <input 
+                    type="text" 
+                    id="name" 
+                    placeholder="Your Name" 
+                    required
+                    aria-label="Your Name">
+
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Your Email" 
+                    required
+                    aria-label="Your Email">
+
+                <button type="submit" class="btn-primary">
+                    Start Now
+                </button>
+
+                <p id="form-message" role="alert"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p>© 2026 Axon Performance - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

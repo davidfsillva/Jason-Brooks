@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!-- META TAGS SEO -->
+    <title>André Marques | Personal Trainer & Coach</title>
+    <meta name="description" content="Transforme seu corpo e mente com método exclusivo. Treino personalizado, acompanhamento nutricional e resultados reais.">
+    <meta name="keywords" content="personal trainer, coaching fitness, treino personalizado, nutricionista, emagrecimento, hipertrofia">
+    <meta name="author" content="André Marques">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon inline (leve) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container" style="padding:0.4rem 0;">
+            <nav class="navbar">
+                <a href="#inicio" class="logo">ANDRÉ<span>MARQUES</span></a>
+                <button class="hamburger" id="hamburger" aria-label="menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#beneficios">Diferenciais</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Agendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="container fade-in">
+                <h1>Seu corpo, sua melhor <span class="hero-highlight">versão</span></h1>
+                <p class="subhead">Metodologia exclusiva que une treino inteligente, nutrição e mentalidade. Resultados que vão além da estética.</p>
+                <div class="cta-group">
+                    <a href="#contato" class="btn">Agendar aula experimental</a>
+                    <a href="#sobre" class="btn btn-outline">Conhecer método</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFÍCIOS 3 COLUNAS -->
+        <section id="beneficios">
+            <div class="container">
+                <h2 class="fade-in">Diferenciais que entregam resultado</h2>
+                <div class="grid-3">
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">🏋️</div>
+                        <h3>Treino 100% personalizado</h3>
+                        <p>Periodização baseada na sua rotina, biomecânica e objetivos. Cada exercício tem um propósito.</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">🥗</div>
+                        <h3>Acompanhamento nutricional</h3>
+                        <p>Cardápio adaptativo e suporte contínuo com foco em performance e saúde.</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">🔥</div>
+                        <h3>Resultados garantidos</h3>
+                        <p>Evolução medida a cada 15 dias. Se não houver progresso, ajustamos tudo até chegar lá.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE O COACH / SERVIÇO -->
+        <section id="sobre" class="sobre">
+            <div class="container sobre-grid">
+                <div class="sobre-content fade-in">
+                    <h2>André Marques, seu parceiro de evolução</h2>
+                    <p>Há 12 anos no mercado, já ajudei mais de 800 alunos a conquistarem mudanças reais — da reabilitação pós-cirúrgica ao alto rendimento.</p>
+                    <div class="sobre-destaque">
+                        “Não acredito em fórmula mágica, e sim em consistência, técnica e relação corpo-mente. Meu método une biomecânica, neurociência e motivação diária.”
+                    </div>
+                    <p>Formação: Educação Física (USP), pós em Fisiologia do Exercício, certificação internacional em coaching nutricional ( Precision Nutrition ).</p>
+                    <a href="#contato" class="btn">Vamos treinar juntos</a>
+                </div>
+                <div class="sobre-image fade-in">
+                    💪🏽
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION FINAL + FORMULÁRIO -->
+        <section id="contato" class="cta-final">
+            <div class="container">
+                <h2 class="fade-in">Comece sua transformação hoje</h2>
+                <p class="fade-in" style="max-width: 600px; margin: 0 auto 2rem;">Primeira sessão gratuita e sem compromisso. Preencha e entrarei em contato para alinharmos seus objetivos.</p>
+                
+                <div class="form-box fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex: Ana Beatriz" required>
+                            <div class="error-msg" id="errorNome"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="ana@email.com" required>
+                            <div class="error-msg" id="errorEmail"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="objetivo">Objetivo principal</label>
+                            <select id="objetivo" name="objetivo" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option>Emagrecimento</option>
+                                <option>Hipertrofia / ganho de massa</option>
+                                <option>Condicionamento / performance</option>
+                                <option>Saúde / bem-estar</option>
+                            </select>
+                            <div class="error-msg" id="errorObjetivo"></div>
+                        </div>
+                        <button type="submit" class="btn btn-form">Quero minha aula grátis</button>
+                        <p style="font-size:0.8rem; color:#aaa; margin-top:1.5rem;">Ao enviar, você aceita ser contactado por e-mail ou WhatsApp.</p>
+                    </form>
+                    <div id="formSuccess" style="color:#a0f0a0; font-weight:500; display:none; margin-top: 1.5rem;">✅ Recebido! Em breve entrarei em contato.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="padding:1.5rem 0;">
+            <p>André Marques · Personal Trainer & Coach</p>
+            <p style="font-size:1rem;">contato@andremarques.com | (11) 99999-9999</p>
+            <div class="social-links">
+                <a href="#" aria-label="instagram">📷</a>
+                <a href="#" aria-label="youtube">▶️</a>
+                <a href="#" aria-label="linkedin">🔗</a>
+            </div>
+            <p style="margin-top:1.5rem; font-size:0.9rem;">© 2025 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="">
+        
+    </script>
+
+    <!-- fallback se JS desativado (fade-in visível) -->
+    <noscript><style>.fade-in { opacity:1; transform:none; }</style></noscript>
+</body>
+</html>

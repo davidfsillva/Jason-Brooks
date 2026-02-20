@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviço Profissional - Landing Page</title>
+  <meta name="description" content="Landing page moderna e responsiva para apresentação de serviços e captação de contatos.">
+  <meta name="keywords" content="serviço, profissional, landing page, contato, conversão">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    /* =============================
+       RESET E ESTILOS GERAIS
+    ============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fefefe;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-family: inherit;
+    }
+
+    /* =============================
+       HEADER / NAV
+    ============================== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      padding: 0.5rem 0;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #27ae60;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #333;
+      transition: all 0.3s;
+    }
+
+    /* =============================
+       HERO SECTION
+    ============================== */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: linear-gradient(135deg, #27ae60, #2ecc71);
+      color: #fff;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background-color: #fff;
+      color: #27ae60;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #27ae60;
+      color: #fff;
+    }
+
+    /* =============================
+       BENEFÍCIOS / 3 COLUNAS
+    ============================== */
+    .benefits {
+      padding: 4rem 0;
+      background-color: #f9f9f9;
+    }
+
+    .benefits h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      color: #27ae60;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .benefit {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .benefit.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .benefit h3 {
+      margin-bottom: 1rem;
+      color: #27ae60;
+    }
+
+    /* =============================
+       SOBRE O SERVIÇO
+    ============================== */
+    .about {
+      padding: 4rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #27ae60;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* =============================
+       CALL TO ACTION FINAL
+    ============================== */
+    .cta-final {
+      padding: 4rem 1rem;
+      background-color: #27ae60;
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta-final h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-final form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-final input, .cta-final textarea {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .cta-final button {
+      background-color: #fff;
+      color: #27ae60;
+      padding: 0.75rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .cta-final button:hover {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+
+    /* =============================
+       FOOTER
+    ============================== */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    /* =============================
+       RESPONSIVO
+    ============================== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">MeuServiço</div>
+        <div class="nav-links">
+          <a href="#hero">Início</a>
+          <a href="#benefits">Benefícios</a>
+          <a href="#about">Sobre</a>
+          <a href="#contact">Contato</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <h1>Transforme seu negócio com nosso serviço</h1>
+    <p>Uma solução moderna, rápida e profissional para alcançar mais clientes.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Quero Saber Mais</button>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="benefits" id="benefits">
+    <h2>Por que escolher nosso serviço?</h2>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <h3>Benefício 1</h3>
+        <p>Descrição clara e objetiva do primeiro benefício que atrai o cliente.</p>
+      </div>
+      <div class="benefit">
+        <h3>Benefício 2</h3>
+        <p>Explicação curta sobre como nosso serviço resolve problemas importantes.</p>
+      </div>
+      <div class="benefit">
+        <h3>Benefício 3</h3>
+        <p>Detalhe final mostrando valor e diferenciais competitivos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O SERVIÇO -->
+  <section class="about" id="about">
+    <h2>Sobre o Serviço</h2>
+    <p>Nossa abordagem é personalizada, focada em resultados e otimizada para entregar máxima eficiência, garantindo que cada cliente alcance seus objetivos com facilidade e segurança.</p>
+  </section>
+
+  <!-- CALL TO ACTION FINAL -->
+  <section class="cta-final" id="contact">
+    <h2>Entre em contato e transforme seu negócio</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu email" required>
+      <textarea id="message" placeholder="Mensagem" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 MeuServiço. Todos os direitos reservados.
+  </footer>
+
+  <!-- =============================
+       SCRIPT JAVASCRIPT
+  ============================== -->
+  <script>
+    // Menu Hamburger Responsivo
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Fade-in ao rolar a página
+    const benefits = document.querySelectorAll('.benefit');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    benefits.forEach(benefit => observer.observe(benefit));
+
+    // Validação simples do formulário
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(!name || !email || !message) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      if(!email.includes('@')) {
+        alert('Por favor, insira um email válido.');
+        return;
+      }
+
+      alert('Mensagem enviada com sucesso!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

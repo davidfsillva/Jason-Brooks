@@ -216,8 +216,10 @@ header {
 /* ================= HERO ANIMATION ================= */
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroReveal 1.2s ease forwards;
+    animation-delay: 0.4s;
 }
 
 @keyframes heroReveal {
@@ -612,9 +614,11 @@ section {
         margin-bottom: -25px;
         opacity: 0.9;
         text-align: center;
-            margin-top: 220px;
-
     }
+
+.hero-small {
+    margin-top: 220px;
+}
 
     .hero-sub {
         font-size: 15px;

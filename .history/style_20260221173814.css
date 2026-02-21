@@ -42,7 +42,7 @@
 }
 
 body {
-    font-family: 'TT Answer', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     background: var(--dark);
     color: var(--text);
     scroll-behavior: smooth;
@@ -180,21 +180,11 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; /* joga conteúdo para esquerda */
     padding: 0 8%;
     overflow: hidden;
 
     background: url("img/herodes2.webp") right center / cover no-repeat;
-    animation: heroZoom 8s ease-out forwards;
-}
-
-@keyframes heroZoom {
-    from {
-        background-size: 105%;
-    }
-    to {
-        background-size: 100%;
-    }
 }
 
 .hero-overlay {
@@ -216,8 +206,10 @@ header {
 /* ================= HERO ANIMATION ================= */
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroReveal 1.2s ease forwards;
+    animation-delay: 0.4s;
 }
 
 @keyframes heroReveal {
@@ -230,16 +222,6 @@ header {
 .hero-content h1 {
     font-size: 85px;
     line-height: 1.05;
-    animation: glowPulse 3s ease-in-out infinite alternate;
-}
-
-@keyframes glowPulse {
-    from {
-        text-shadow: 0 0 10px rgba(255,255,255,0.1);
-    }
-    to {
-        text-shadow: 0 0 25px rgba(255,255,255,0.35);
-    }
 }
 
 .hero-small {
@@ -250,6 +232,10 @@ header {
     opacity: 0.8;
 }
 
+.hero-content h1 {
+    font-size: 80px;
+    line-height: 1.1;
+}
 
 .hero-sub {
     margin: 25px 0;
@@ -612,9 +598,11 @@ section {
         margin-bottom: -25px;
         opacity: 0.9;
         text-align: center;
-            margin-top: 220px;
-
     }
+
+.hero-small {
+    margin-top: 220px;
+}
 
     .hero-sub {
         font-size: 15px;

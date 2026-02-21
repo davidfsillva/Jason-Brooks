@@ -309,8 +309,8 @@ header {
 }
 
 .btn-primary:hover {
-    background: var(--text);
-    color: #d32525;
+    background: var(--primary-light);
+    color: white;
     transform: translateY(-3px);
 }
 

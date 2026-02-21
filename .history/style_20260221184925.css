@@ -310,7 +310,7 @@ header {
 
 .btn-primary:hover {
     background: var(--text);
-    color: #d32525;
+    color: white;
     transform: translateY(-3px);
 }
 

@@ -175,12 +175,13 @@ header {
 
 /* ================= HERO ================= */
 .hero {
-    min-height: 100vh;
+    min-height: 100vh; /* melhor que height fixo */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 10%;
     position: relative;
+    overflow: hidden;
     background: linear-gradient(
         120deg,
         #000000 40%,
@@ -235,17 +236,14 @@ header {
 .hero-image-side {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* mantém no lado direito */
+    justify-content: flex-end; /* joga imagem pra direita */
     align-items: center;
-    padding-right: 70px; /* controla o quanto ela se afasta da borda */
-    margin-top: 100px;
-
-
 }
 
 .hero-image-side img {
-    width: 95%;
-    max-width: 480px;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
 }
 
 
@@ -524,6 +522,7 @@ section {
         justify-content: center;
         margin-top: 30px;
     }
+}
 
     .hero-content {
         text-align: center;
@@ -553,6 +552,10 @@ section {
 
     .nav.active {
         display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .menu-toggle {

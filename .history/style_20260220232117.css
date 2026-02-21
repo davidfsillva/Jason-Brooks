@@ -237,15 +237,12 @@ header {
     display: flex;
     justify-content: flex-end; /* mantém no lado direito */
     align-items: center;
-    padding-right: 70px; /* controla o quanto ela se afasta da borda */
-    margin-top: 100px;
-
-
+    padding-right: 20px; /* controla o quanto ela se afasta da borda */
 }
 
 .hero-image-side img {
-    width: 95%;
-    max-width: 480px;
+    width: 100%;
+    max-width: 520px;
 }
 
 

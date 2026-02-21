@@ -24,7 +24,7 @@
 /* ================= DESIGN SYSTEM ================= */
 :root {
     --primary: #b0002a;
-    --primary-light: #d32525;
+    --primary-light: #c91616;
     --dark: #0f0f0f;
     --dark-light: #1a1a1a;
     --text: #ffffff;
@@ -175,19 +175,17 @@ header {
 
 /* ================= HERO ================= */
 .hero {
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 8%;
-    position: relative;
-    background: linear-gradient(
-        120deg,
-        #000000 40%,
-        #5a0015 100%
-    );
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: #5a0015; /* fundo vinho base */
 }
 
+/* Overlay vermelho vinho */
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -205,13 +203,24 @@ header {
         );
 }
 
-.hero-content {
-    flex: 1;
-    text-align: left;
-    max-width: 600px;
+/* Imagem */
+.hero-image {
+    position: absolute;
+    width: 40%;
+    object-fit: contain;
+    object-position: center center; /* CENTRALIZA */
     z-index: 2;
 }
 
+/* Conteúdo */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    max-width: 900px;
+}
+
+/* Texto pequeno */
 .hero-small {
     font-size: 13px;
     letter-spacing: 3px;
@@ -220,32 +229,20 @@ header {
     opacity: 0.8;
 }
 
-.hero-content h1 {
-    font-size: 80px;
-    line-height: 1.1;
+/* Título principal */
+.hero h1 {
+    font-size: 110px;
+    letter-spacing: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
+/* Subtexto */
 .hero-sub {
     margin: 25px 0;
     font-size: 15px;
     font-weight: 400;
     opacity: 0.9;
-}
-
-.hero-image-side {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* mantém no lado direito */
-    align-items: center;
-    padding-right: 70px; /* controla o quanto ela se afasta da borda */
-    margin-top: 100px;
-
-
-}
-
-.hero-image-side img {
-    width: 95%;
-    max-width: 480px;
 }
 
 
@@ -514,20 +511,10 @@ section {
 
 /* ================= RESPONSIVE ================= */
 @media(max-width: 768px) {
-
     .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image-side {
-        justify-content: center;
-        margin-top: 30px;
-    }
-
-    .hero-content {
-        text-align: center;
-        padding-left: 0;
+        background-size: 109%;
+        background-position: center 25%;
+    
     }
 
     .hero h1 {
@@ -553,6 +540,10 @@ section {
 
     .nav.active {
         display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .menu-toggle {

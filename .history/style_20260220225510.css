@@ -175,12 +175,13 @@ header {
 
 /* ================= HERO ================= */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* separa imagem e texto */
     padding: 0 8%;
     position: relative;
+    overflow: hidden;
     background: linear-gradient(
         120deg,
         #000000 40%,
@@ -207,9 +208,8 @@ header {
 
 .hero-content {
     flex: 1;
-    text-align: left;
-    max-width: 600px;
-    z-index: 2;
+    text-align: right;
+    padding-left: 80px;
 }
 
 .hero-small {
@@ -235,17 +235,13 @@ header {
 .hero-image-side {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* mantém no lado direito */
     align-items: center;
-    padding-right: 70px; /* controla o quanto ela se afasta da borda */
-    margin-top: 100px;
-
-
 }
 
 .hero-image-side img {
-    width: 95%;
-    max-width: 480px;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
 }
 
 
@@ -514,15 +510,9 @@ section {
 
 /* ================= RESPONSIVE ================= */
 @media(max-width: 768px) {
-
     .hero {
         flex-direction: column;
         text-align: center;
-    }
-
-    .hero-image-side {
-        justify-content: center;
-        margin-top: 30px;
     }
 
     .hero-content {
@@ -553,6 +543,10 @@ section {
 
     .nav.active {
         display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .menu-toggle {

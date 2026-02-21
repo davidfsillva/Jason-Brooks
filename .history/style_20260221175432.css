@@ -605,7 +605,7 @@ section {
         font-size: 48px;
         line-height: 1.05;
         letter-spacing: 3px;
-        margin-top: 70px;
+        margin-top: 20px;
         text-shadow: 0 5px 20px rgba(0,0,0,0.6);
         text-align: center;
     }
@@ -617,7 +617,7 @@ section {
         margin-bottom: -25px;
         opacity: 0.9;
         text-align: center;
-        margin-top: 140px;
+            margin-top: 220px;
 
     }
 
@@ -625,7 +625,7 @@ section {
         font-size: 15px;
         margin-bottom: 25px;
         opacity: 0.95;
-        text-align: center;
+                text-align: center;
 
     }
 

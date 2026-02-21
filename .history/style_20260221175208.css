@@ -304,8 +304,6 @@ header {
     border-radius: 30px;
     letter-spacing: 1px;
     transition: var(--transition);
-        margin-top: 30px;
-
 }
 
 .btn-primary:hover {
@@ -617,7 +615,7 @@ section {
         margin-bottom: -25px;
         opacity: 0.9;
         text-align: center;
-        margin-top: 140px;
+            margin-top: 220px;
 
     }
 
@@ -625,7 +623,7 @@ section {
         font-size: 15px;
         margin-bottom: 25px;
         opacity: 0.95;
-        text-align: center;
+                text-align: center;
 
     }
 

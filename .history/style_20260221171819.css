@@ -586,18 +586,14 @@ section {
     .hero-small {
         font-size: 11px;
         letter-spacing: 2px;
-        margin-bottom: -25px;
+        margin-bottom: 15px;
         opacity: 0.9;
         text-align: center;
     }
 
-.hero-small {
-    margin-top: 220px;
-}
-
     .hero-sub {
         font-size: 15px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         opacity: 0.95;
                 text-align: center;
 

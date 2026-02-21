@@ -534,20 +534,19 @@ section {
 
 @media (max-width: 768px) {
 
-    /* ===== HERO ESTRUTURA ===== */
     .hero {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;   /* CENTRALIZA VERTICAL */
-        align-items: center;       /* CENTRALIZA HORIZONTAL */
+        justify-content: center;
         min-height: 100vh;
-        padding: 0 20px;
+        padding: 120px 20px 60px;
         text-align: center;
+
         background: url("img/heromobile.webp") center 35% / cover no-repeat;
     }
 
-    /* ===== FADE PROFISSIONAL CINEMATOGRÁFICO ===== */
+    /* Fade cinematográfico */
     .hero-overlay {
         position: absolute;
         inset: 0;
@@ -557,7 +556,7 @@ section {
             rgba(0,0,0,0.85) 20%,
             rgba(0,0,0,0.35) 45%,
             rgba(0,0,0,0.35) 65%,
-            rgba(0,0,0,0.9) 100%
+            rgba(0,0,0,0.95) 100%
         );
         z-index: 1;
     }
@@ -567,53 +566,49 @@ section {
         z-index: 2;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
+        height: 100%;
     }
 
-    /* ===== PERSONAL TRAINER (TOPO) ===== */
-    .hero-content h1 {
+    /* 🔝 PERSONAL TRAINER NO TOPO */
+    .hero-title {
+        margin-top: 0;
         font-size: 48px;
         line-height: 1.05;
         letter-spacing: 3px;
-        margin-top: 70px;
-        text-shadow: 0 5px 20px rgba(0,0,0,0.6);
         text-align: center;
     }
 
-    /* ===== PARTE INFERIOR ===== */
+    /* 🔻 BLOCO INFERIOR */
+    .hero-bottom {
+        margin-top: auto;
+        text-align: center;
+    }
+
     .hero-small {
         font-size: 11px;
         letter-spacing: 2px;
-        margin-bottom: -25px;
+        margin-bottom: 15px;
         opacity: 0.9;
-        text-align: center;
     }
-
-.hero-small {
-    margin-top: 220px;
-}
 
     .hero-sub {
         font-size: 15px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         opacity: 0.95;
-                text-align: center;
-
     }
 
-    /* ===== BOTÃO MAIS LARGO ===== */
+    /* BOTÃO CENTRALIZADO E MAIS LARGO */
     .btn-primary {
-        width: 80%;
-        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+        width: 85%;
+        max-width: 320px;
         padding: 16px 0;
         font-size: 15px;
         border-radius: 40px;
-        text-align: center;
     }
 
-    /* ===== MENU MOBILE ===== */
+    /* MENU */
     .nav {
         position: absolute;
         top: 80px;
@@ -633,7 +628,6 @@ section {
         display: block;
     }
 
-    /* ===== ABOUT RESPONSIVO ===== */
     .about-container {
         flex-direction: column;
         text-align: center;

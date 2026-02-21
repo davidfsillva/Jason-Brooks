@@ -184,7 +184,7 @@ header {
     padding: 0 8%;
     overflow: hidden;
 
-    background: url("img/herodes2.webp") right center / cover no-repeat;
+    background: url("img/Design sem nome (2).png") right center / cover no-repeat;
 }
 
 .hero-overlay {
@@ -531,89 +531,33 @@ section {
 
 
 /* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
 
-@media (max-width: 768px) {
-
-    /* ===== HERO ESTRUTURA ===== */
     .hero {
-        position: relative;
-        display: flex;
         flex-direction: column;
-        justify-content: center;   /* CENTRALIZA VERTICAL */
-        align-items: center;       /* CENTRALIZA HORIZONTAL */
-        min-height: 100vh;
-        padding: 0 20px;
         text-align: center;
-        background: url("img/heromobile.webp") center 35% / cover no-repeat;
     }
 
-    /* ===== FADE PROFISSIONAL CINEMATOGRÁFICO ===== */
-    .hero-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            180deg,
-            rgba(0,0,0,0.95) 0%,
-            rgba(0,0,0,0.85) 20%,
-            rgba(0,0,0,0.35) 45%,
-            rgba(0,0,0,0.35) 65%,
-            rgba(0,0,0,0.9) 100%
-        );
-        z-index: 1;
+    .hero-image-side {
+        justify-content: center;
+        margin-top: 30px;
     }
 
     .hero-content {
-        position: relative;
-        z-index: 2;
-        display: flex;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        letter-spacing: 10px;
+    }
+
+    .about-container {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    /* ===== PERSONAL TRAINER (TOPO) ===== */
-    .hero-content h1 {
-        font-size: 48px;
-        line-height: 1.05;
-        letter-spacing: 3px;
-        margin-top: 70px;
-        text-shadow: 0 5px 20px rgba(0,0,0,0.6);
         text-align: center;
     }
 
-    /* ===== PARTE INFERIOR ===== */
-    .hero-small {
-        font-size: 11px;
-        letter-spacing: 2px;
-        margin-bottom: -25px;
-        opacity: 0.9;
-        text-align: center;
-    }
-
-.hero-small {
-    margin-top: 220px;
-}
-
-    .hero-sub {
-        font-size: 15px;
-        margin-bottom: 25px;
-        opacity: 0.95;
-                text-align: center;
-
-    }
-
-    /* ===== BOTÃO MAIS LARGO ===== */
-    .btn-primary {
-        width: 80%;
-        max-width: 300px;
-        padding: 16px 0;
-        font-size: 15px;
-        border-radius: 40px;
-        text-align: center;
-    }
-
-    /* ===== MENU MOBILE ===== */
     .nav {
         position: absolute;
         top: 80px;
@@ -631,11 +575,5 @@ section {
 
     .menu-toggle {
         display: block;
-    }
-
-    /* ===== ABOUT RESPONSIVO ===== */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
     }
 }

@@ -577,7 +577,7 @@ section {
         font-size: 48px;
         line-height: 1.05;
         letter-spacing: 3px;
-        margin-top: 70px;
+        margin-top: -110px;
         text-shadow: 0 5px 20px rgba(0,0,0,0.6);
         text-align: center;
     }
@@ -586,18 +586,20 @@ section {
     .hero-small {
         font-size: 11px;
         letter-spacing: 2px;
-        margin-bottom: -25px;
+        margin-bottom: 15px;
         opacity: 0.9;
         text-align: center;
     }
 
-.hero-small {
-    margin-top: 220px;
+    .hero-small,
+    .hero-sub,
+    .btn-primary {
+        transform: translateY(90px);
 }
 
     .hero-sub {
         font-size: 15px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         opacity: 0.95;
                 text-align: center;
 

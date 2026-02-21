@@ -249,7 +249,7 @@ header {
     -webkit-mask-image: linear-gradient(
         135deg,
         transparent 0%,
-        black 40%,
+        black 80%,
         black 60%,
         transparent 100%
     );

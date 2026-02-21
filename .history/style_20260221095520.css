@@ -244,7 +244,6 @@ header {
 .hero-image-side img {
     width: 95%;
     max-width: 480px;
-    border-radius: 20px;
 
     -webkit-mask-image: linear-gradient(
         135deg,
